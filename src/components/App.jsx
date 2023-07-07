@@ -97,7 +97,6 @@ export const App = () => {
       }
 
       try {
-        setIsLoading(true);
         await fetchPictures(searchQuery, currentPage).then(responce => {
           const newPicturesArray = responce.data.hits;
           if (newPicturesArray.length === 0) {
